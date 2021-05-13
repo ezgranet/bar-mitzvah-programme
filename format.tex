@@ -1,0 +1,41 @@
+%%% PAGE SIZE
+\usepackage[paperwidth=5.5in, paperheight=8.5in,margin=0.75in]{geometry}
+%%%% HEBREW AND FONT
+\usepackage[main=english,bidi=default]{babel}
+\babelprovide[import=he]{hebrew}
+\babelfont{rm}[Language=English, SmallCapsFeatures = {LetterSpace  =  15,
+                            WordSpace  =  { 1.5, 1.5, 1.5},},]{EB Garamond}
+\babelfont[hebrew]{rm}[LetterSpace  =  18,
+                            WordSpace  =  {1.8, 1.8, 1.8}]{DavidLibre-Regular.ttf}
+                            \babelfont[hebrew]{tt}{DavidLibre-Regular.ttf}
+                            
+\babelfont[hebrew]{sf}{DorianCLMBookItalic.ttf}
+\usepackage{calligra}
+%%%% NO PAGE NUMBERS
+\pagenumbering{gobble}
+%%%%% FOR THE PHOTOS
+\usepackage{graphicx}
+%%%% FOR ADDING NAMES TO THE SERVICE SECTION
+\newcommand{\servo}[3]{\textbf{#1}\hfill#2, \textit{#3}\\}
+%%%%% INDENTATION
+\setlength{\parindent}{1em}
+
+\usepackage{siunitx}
+%%%% FOR THE DEMO
+\usepackage{lipsum}
+%%%%% BORDERS
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usetikzlibrary[calc]
+\AddToShipoutPictureBG{%
+\begin{tikzpicture}[overlay,remember picture]
+%                      V-----------------V
+\draw[line width=0.5pt,rounded corners=1cm]
+    ($ (current page.north west) + (1.2cm,-1.2cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.2cm,1.2cm) $);
+\end{tikzpicture}
+}
+\newcommand*{\ClipSep}{0.05cm}%
+%%%  SPACING
+\usepackage{setspace}
